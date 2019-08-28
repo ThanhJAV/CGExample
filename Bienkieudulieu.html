@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bien,kieu du lieu,toan tu</title>
 </head>
 <body>
-$END$
+<script>
+    let inputvatly,inputhoahoc,inputsinhhoc,trungbinh,tong;
+    inputvatly = prompt("Nhap diem vat ly :");
+    inputhoahoc = prompt("Nhap diem hoa hoc :");
+    inputsinhhoc = prompt("Nhap diem sinh hoc :");
+    inputvatly = Number(inputvatly);
+    inputhoahoc = Number(inputhoahoc);
+    inputsinhhoc = Number(inputsinhhoc);
+    tong = inputvatly+inputhoahoc+inputsinhhoc;
+    trungbinh = tong/3;
+    alert(' Tong la : '+ tong);
+    alert('Diem trung binh la : '+trungbinh );
+</script>
 </body>
 </html>
