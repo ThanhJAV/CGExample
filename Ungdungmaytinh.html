@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ung dung may tinh</title>
+</head>
+<body>
+<input type="text" id = "so1" value="">
+<input type="text" id = "so2" value="">
+<button type = "button" onclick="Addition()">Addition(+)</button>
+<button type = "button" onclick="Subtraction()">Subtraction(-)</button>
+<button type = "button" onclick="Multiplication()">Multiplication(X)</button>
+<button type = "button" onclick="Division()">Division(/)</button>
+<script>
+  function Addition() {
+      let a = parseInt(document.getElementById('so1').value);
+      let b = parseInt(document.getElementById('so2').value);
+      let c = parseInt(document.getElementById('so1').value) + parseInt(document.getElementById('so2').value);
+      alert(c);
+  }
+  function Subtraction() {
+      let a = parseInt(document.getElementById('so1').value);
+      let b = parseInt(document.getElementById('so2').value);
+      let c = parseInt(document.getElementById('so1').value) - parseInt(document.getElementById('so2').value);
+      alert(c);
+  }
+  function Multiplication() {
+      let a = parseInt(document.getElementById('so1').value);
+      let b = parseInt(document.getElementById('so2').value);
+      let c = parseInt(document.getElementById('so1').value) * parseInt(document.getElementById('so2').value);
+      alert(c);
+  }
+  function Division() {
+      let a = parseInt(document.getElementById('so1').value);
+      let b = parseInt(document.getElementById('so2').value);
+      let c = parseInt(document.getElementById('so1').value) / parseInt(document.getElementById('so2').value);
+      alert(c);
+  }
+
+</script>
+</body>
+</html>
