@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Cautruclap</title>
 </head>
 <body>
-$END$
+<script>
+    function findMax() {
+        let n = document.getElementById('id_text').value;
+        let arr =n.split(',');
+        let max=Number(arr[0]);
+        for(let n=0; n<arr.length; n++)
+        {
+            if (max < Number(arr[n]))
+            {
+                max=Number(arr[n]);
+            }
+        }
+        alert (max);
+    }
+</script>
+<input type="text" id="id_text">
+<button type="button" onclick="findMax()">click me</button>
 </body>
 </html>

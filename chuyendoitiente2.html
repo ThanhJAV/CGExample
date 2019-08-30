@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Chuyen doi tien te</title>
+</head>
 </head>
 <body>
-$END$
+ <form>
+    <table>
+      <tr>
+        <th align="center">Amount</th>
+        <th align="center">From Currency</th>
+        <th align="center">To Currency</th>
+      </tr>
+      <tr>
+        <td><input id="input" type="text" value=""></td>
+        <td>
+          <select id='select1'>
+            <option value="1">VND</option>
+            <option value="23">USD</option>
+          </select>
+        </td>
+        <td>
+          <select id="select2">
+            <option value="1">VND</option>
+            <option value="23">USD</option>
+          </select>
+        </td>
+        <td>
+          <button type="button" onclick="convert()">Convert</button>
+        </td>
+      </tr>
+
+    </table>
+  </form>
+
+    <script>
+   function convert(){
+        let a = document.getElementById('input').value;
+        let b = document.getElementById('select1').value;
+        let c = document.getElementById('select2').value;
+        c = b*23;
+        b = c/23;
+       document.getElementById('input').value = b;
+       document.getElementById('input').value = c;
+       }
+
+
+
+    </script>
+
 </body>
 </html>
