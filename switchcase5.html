@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Switch case</title>
+</head>
+<body>
+<script>
+    let inputnumber = +prompt('Nhap gia tri : ');
+    // inputnumber = parseInt(inputnumber);
+    if (inputnumber > 0) {
+        inputnumber = 1;
+    } else if (inputnumber < 0) {
+        inputnumber = -1;
+    }
+
+
+    switch (inputnumber) {
+        case 1:
+            alert("so nay lon hon 0");
+            break;
+        case -1:
+            alert("so nay nho hon 0");
+            break;
+        case 0:
+            alert("0")
+
+    }
+</script>
+</body>
+</html>
