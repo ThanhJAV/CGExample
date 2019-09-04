@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap cau truc dieu kien 01</title>
+</head>
+<body>
+<form>
+  <fieldset>
+    <legend>Bài 1 : Kiểm tra a có chia hết cho b hay k</legend>
+    <input id="inputa">
+    <input id="inputb">
+    <input type="button" value="Kiểmtra" onclick="tinhtoan2()">
+    <div id="result"></div>
+    <script>
+      function tinhtoan2(){
+         let inputA = +parseFloat(document.getElementById("inputa").value);
+         let inputB = +parseFloat(document.getElementById("inputb").value);
+         let C = inputA%inputB;
+          if(C==0){
+              document.getElementById("result").innerText = " a chia het cho b";
+          }
+          else
+              document.getElementById("result").innerText = " a k chia het cho b";
+      }
+    </script>
+  </fieldset><br>
+  <fieldset>
+    <legend>Bai 2 : Điều kiện vào học lớp 10</legend>
+    <input id="age" value="Nhập tuổi">
+    <input type="button" value="Kiểm tra" onclick="kttuoi()">
+    <div id = "kt"></div>
+    <script>
+      function kttuoi(){
+          let tuoi = +parseInt(document.getElementById("age").value);
+          if(tuoi<16){
+              document.getElementById("kt").innerText = " Không đủ điều kiện vào lớp 10 ";
+          }else if(tuoi<30&&tuoi>16)
+              document.getElementById("kt").innerText = " Đủ điều kiện học lớp 10 ";
+          else if (tuoi>30)
+              document.getElementById("kt").innerText = " Quá già ! ";
+
+
+      }
+    </script>
+  </fieldset>
+</form>
+
+</body>
+</html>
