@@ -5,14 +5,16 @@
     <title>Tinh so ngay</title>
 </head>
 <body>
-<input id="input" type="text">
-<button onclick="tinhtoan()">Tinh so ngay</button>
-<div id="result"></div>
-<script>
-
-  function tinhtoan() {
-      let inputMonth = parseInt(document.getElementById("input").value);
-      switch (inputMonth) {
+  <form>
+    <fieldset>
+      <legend>Tinh so ngay trong thang</legend>
+        <input id="input" type="text">
+        <input type="button" onclick="tinhtoan()" value="Tinh so ngay">
+        <div id="result"></div>
+        <script>
+        function tinhtoan() {
+        let inputMonth = parseInt(document.getElementById("input").value);
+        switch (inputMonth) {
           case 1:
           case 3:
           case 5:
@@ -20,23 +22,25 @@
           case 8:
           case 10:
           case 12:
-              document.getElementById("result").innerHTML = ("Thang "+ inputMonth + " co 31 ngay");
-              break;
+            document.getElementById("result").innerHTML = ("Thang "+ inputMonth + " co 31 ngay");
+            break;
           case 4:
           case 6:
           case 9:
           case 11:
-              document.getElementById("result").innerHTML = ("Thang "+ inputMonth + " co 30 ngay ");
-              break;
+            document.getElementById("result").innerHTML = ("Thang "+ inputMonth + " co 30 ngay ");
+            break;
           case 2:
-              document.getElementById("result").innerHTML = ("Thang " + inputMonth + " co 28 hoac 29 ngay");
-              break;
+            document.getElementById("result").innerHTML = ("Thang " + inputMonth + " co 28 hoac 29 ngay");
+            break;
           default:
-              document.getElementById("result").innerHTML = ("Khong co thang " + inputMonth);
+            document.getElementById("result").innerHTML = ("Khong co thang " + inputMonth);
 
-      }
+        }
 
-  }
-</script>
+        }
+      </script>
+    </fieldset>
+  </form>
 </body>
 </html>
