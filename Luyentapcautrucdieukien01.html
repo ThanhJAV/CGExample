@@ -24,7 +24,8 @@
               document.getElementById("result").innerText = " a k chia het cho b";
       }
     </script>
-  </fieldset><br>
+  </fieldset>
+</form><br><br>
   <fieldset>
     <legend>Bai 2 : Điều kiện vào học lớp 10</legend>
     <input id="age" value="Nhập tuổi">
@@ -44,7 +45,118 @@
       }
     </script>
   </fieldset>
+</form><br><br>
+<form>
+  <fieldset>
+    <legend> Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</legend>
+    <input type="text" id="inputNumber">
+    <input type="button" value="Kiem tra" id="button" onclick="numBer()">
+    <div id="resul"></div>
+    <script>
+      function numBer(){
+          let a = +parseFloat(document.getElementById("inputNumber").value);
+          if(a>0){
+              document.getElementById("resul").innerHTML = a + " lon hon 0";
+          }else if(a<0){
+              document.getElementById("resul").innerHTML = a + " nho hon 0";
+          }else
+              document.getElementById("resul").innerHTML =  " Ban nhap vao khong dung";
+      }
+    </script>
+  </fieldset>
+</form><br><br>
+<form>
+  <fieldset>
+    <legend>Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</legend>
+      <table>
+        <tr>
+          <td><input type="text" id = input2></td>
+          <td><input type="text" id = input3></td>
+          <td><input type="text" id = input4></td>
+          <td><input type="button" id = "timmax" value="Find Max" onclick="findMax()"></td>
+        </tr>
+        <tr>
+            <td><div id="display"></div></td>
+        </tr>
+      </table>
+    <script>
+      function findMax() {
+          let a = document.getElementById("input2").value;
+          let b = document.getElementById("input3").value;
+          let c = document.getElementById("input4").value;
+          let Max = a;
+          if (b > Max)
+            Max = b;
+          if (c > Max){
+             Max = c;
+          }
+          document.getElementById("display").innerHTML = Max + " la Max";
+      }
+    </script>
+  </fieldset>
+</form><br><br>
+<form>
+  <fieldset>
+    <legend>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</legend>
+    <table>
+
+      <tr>
+        <td>Điểm bài kiểm tra</td>
+        <td><input type="text" id="score1"></td>
+      </tr><br>
+
+      <tr>
+        <td>Điểm thi giữa kì</td>
+        <td><input type="text" id="score2"></td>
+      </tr><br>
+
+      <tr>
+        <td>Điểm thi cuối kì</td>
+        <td><input type="text" id="score3"></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" id="rank" value="Rank" onclick="ranks()"></td>
+        <td><input type="text" disabled id="displayRank"></td>
+      </tr>
+
+    </table>
+
+    <script>
+
+      function ranks(){
+          let sc1 = +parseFloat(document.getElementById("score1").value);
+          let sc2 = +parseFloat(document.getElementById("score2").value);
+          let sc3 = +parseFloat(document.getElementById("score3").value);
+          //let mediumScore =  parseFloat(mediumScore);
+         let mediumScore = (0.1 * sc1) + (0.2 * sc2) + (0.7 * sc3);
+         mediumScore=mediumScore.toFixed(2);
+          if(mediumScore <= 4){
+              document.getElementById("displayRank").value = mediumScore + " là rank kém";
+          }else if(mediumScore > 4 && mediumScore <= 5.5){
+              document.getElementById("displayRank").value = mediumScore + " là rank yếu";
+          } else if(mediumScore > 5.5 && mediumScore <= 6.9){
+              document.getElementById("displayRank").value = mediumScore + " là rank trung bình";
+          }else if(mediumScore > 6.9 && mediumScore <= 8.4){
+              document.getElementById("displayRank").value = `điểm ${mediumScore} là rank khá`;
+          }else if(mediumScore>8.4 && mediumScore<=9.5){
+              document.getElementById("displayRank").value = mediumScore + " là rank giỏi";
+          }else if(mediumScore>9.5 && mediumScore<=10){
+              document.getElementById("displayRank").value = mediumScore + " là rank xuất sắc";
+          }
+      }
+
+    </script>
+  </fieldset>
+</form><br><br>
+<form>
+  <fieldset>
+    <legend>
+
+    </legend>
+  </fieldset>
 </form>
+
 
 </body>
 </html>
